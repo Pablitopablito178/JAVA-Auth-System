@@ -1,20 +1,42 @@
 package org.pablogonzalez.models;
 
 public class Alumno extends Persona{
-    public int idAlumno;
-    public String colegioAlumno;
+    private String carnet;
+    private String grado;
+    private String seccion;
     
     public Alumno(){
     }
-
-    public Alumno(int idAlumno, String colegioAlumno, 
-            String nombres, String apellidos, Integer edad) {
+    
+    public Alumno(String nombres, String apellidos, Integer edad, 
+            String carnet, String grado, String seccion){
         super(nombres, apellidos, edad);
-        this.idAlumno = idAlumno;
-        this.colegioAlumno = colegioAlumno;
+        this.carnet = carnet;
+        this.grado = grado;
+        this.seccion = seccion;
     }
     
+    public String getCarnet(){
+        return carnet;
+    }
     
+    public void setCarnet(String carnet){
+        this.carnet = carnet;
+    }
     
+    public String getGrado(){
+        return grado;
+    }
     
+    public void getGrado(String grado){
+        this.grado = grado;
+    }
+    
+    public String getSeccion(){
+        return seccion;
+    }
+    
+    public void setSeccion(String seccion){
+        this.seccion = seccion;
+    }
 }
