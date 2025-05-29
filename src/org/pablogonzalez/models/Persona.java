@@ -42,4 +42,9 @@ public class Persona {
     public void saludar(){
         System.out.println("Hola mi nombre es " + nombres + " y tengo" + edad + " años");
     }
+
+    @Override
+    public String toString() {
+        return "Persona{" + "nombres=" + nombres + ", apellidos=" + apellidos + ", edad=" + edad + '}';
+    }
 }

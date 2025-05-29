@@ -8,7 +8,6 @@ public class Main {
         Persona persona1 = new Persona();
         Persona persona2 = new Persona();
         Persona persona3 = new Persona("Pablito", "Jauregui", 12);
-        Alumno alum1 = new Alumno( 1, "Liceo Rumanoe", "Juna", "Perez", 15);
         
         persona1.nombres = "Jose";
         persona2.apellidos = "Gonzalez";
