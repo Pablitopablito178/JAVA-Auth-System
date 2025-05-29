@@ -39,4 +39,9 @@ public class Alumno extends Persona{
     public void setSeccion(String seccion){
         this.seccion = seccion;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Alumno{" + "carnet=" + carnet + ", grado=" + grado + ", seccion=" + seccion + '}';
+    }
 }
