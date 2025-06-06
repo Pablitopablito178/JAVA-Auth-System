@@ -1,9 +1,9 @@
 package org.pablogonzalez.models;
 
 public class Alumno extends Persona{
-    private String carnet;
-    private String grado;
-    private String seccion;
+    public String carnet;
+    public String grado;
+    public String seccion;
     
     public Alumno(){
     }
