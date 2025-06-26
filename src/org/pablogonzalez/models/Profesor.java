@@ -5,13 +5,11 @@ public class Profesor extends Persona{
     private String phone;
     private String id;
 
-    public Profesor() {
-    }
+    public Profesor(){}
 
     public Profesor(String id, String email, String phone, String nombres, String apellidos, Integer edad) {
         super(nombres, apellidos, edad);
         this.id = id;
-        this.email = email;
         this.phone = phone;
     }
 
@@ -28,7 +26,11 @@ public class Profesor extends Persona{
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        if(email != null && email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")){
+            this.email = email;
+        }else{
+            this.email = "Email inválido";
+        }
     }
 
     public String getPhone() {
@@ -41,9 +43,13 @@ public class Profesor extends Persona{
 
     @Override
     public String toString() {
-        return super.toString() + "Profesor{" + "id=" + id + ", email=" + email + ", phone=" + phone + '}';
+        return """
+               
+               --- PROFESOR ---
+               Nombre: """ + getNombres() + " " + getApellidos() + "\n" +
+                "Edad: " + getEdad() + "\n" +
+                "ID: " + id + "\n" +
+                "Email: " + email + "\n" +
+                "Telefono: " + phone + "\n";
     }
-    
-    
-    
 }
